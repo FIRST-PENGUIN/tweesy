@@ -5,16 +5,16 @@
 
   "description": "This extension makes it easy to tweet on Twitter.",
   "icons": {
-    "16": "images/icons/icon_16.png",
-    "19": "images/icons/icon_19.png",
-    "38": "images/icons/icon_38.png",
-    "48": "images/icons/icon_48.png",
-    "128": "images/icons/icon_128.png"
+    "16": "icons/icon_16.png",
+    "19": "icons/icon_19.png",
+    "38": "icons/icon_38.png",
+    "48": "icons/icon_48.png",
+    "128": "icons/icon_128.png"
   },
   "browser_action": {
     "default_icon": {
-      "19": "images/icons/icon_19.png",
-      "38": "images/icons/icon_38.png"
+      "19": "icons/icon_19.png",
+      "38": "icons/icon_38.png"
     },
     "default_title": "Tweesy",
     "default_popup": "popup.html"
