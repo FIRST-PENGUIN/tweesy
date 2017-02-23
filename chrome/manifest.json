@@ -19,5 +19,19 @@
     "default_title": "Tweesy",
     "default_popup": "popup.html"
   },
-  "homepage_url": "https://github.com/sa-inu/tweesy"
+  "background": {
+    "scripts": [
+      "js/app/background.js"
+    ]
+  },
+  "homepage_url": "https://github.com/sa-inu/tweesy",
+  "commands": {
+    "showTweesy": {
+      "suggested_key": {
+        "default": "Ctrl+T",
+        "mac": "MacCtrl+T"
+      },
+      "description": "Send 'showTweesy' event to the extension."
+    }
+  }
 }
