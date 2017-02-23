@@ -3,18 +3,23 @@
   <head>
     <meta charset="UTF-8">
     <title>Tweesy</title>
-    <link rel="stylesheet" href="css/popup.css">
+    <link rel="stylesheet" href="css/app/popup.css">
+    <link rel="stylesheet" href="css/lib/bootstrap.min.css">
     <script src="js/lib/angular.min.js"></script>
     <script src="js/app/bundle.js"></script>
   </head>
-  <body class="popupbody" ng-controller="PopupController as vm">
+  <body class="popupbody container" ng-controller="PopupController as vm">
     <h1>Tweesy</h1>
-    <p ng-bind="vm.content.length"></p>
     <form name="tweetForm" ng-submit="vm.submitTweet()" ng-if="!vm.completed" novalidate>
-      <input type="text" name="content" ng-model="vm.content">
-      <input type="submit" value="ツイート" ng-disabled="vm.content.length === 0 || vm.content.length >= 140">
+      <div class="form-group">
+        <textarea class="form-control" name="content" ng-model="vm.content" rows="3"></textarea>
+      </div>
+      <div class="text-right">
+        <span ng-class="{'text-danger': vm.isDisabledTweet()}" ng-bind="vm.content.length"></span>
+        <button class="btn btn-info" type="submit" ng-disabled="vm.isDisabledTweet()">ツイート</button>
+      </div>
     </form>
-    <div ng-if="vm.completed">
+    <div class="alert alert-info" role="alert" ng-if="vm.completed">
       ツイートが完了しました。
     </div>
   </body>
