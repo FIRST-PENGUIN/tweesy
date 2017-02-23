@@ -13,3 +13,7 @@ $ webpack
 4. Navigate to the directory in which `chrome folder` live, and select it.
 
 Alternatively, you can drag and drop the directory where your extension files live onto chrome://extensions in your browser to load it.
+
+## License
+
+MIT
