@@ -18,5 +18,6 @@
     },
     "default_title": "Tweesy",
     "default_popup": "popup.html"
-  }
+  },
+  "homepage_url": "https://github.com/sa-inu/tweesy"
 }
