@@ -2,3 +2,4 @@ icons.sketch
 node_modules
 .DS_Store
 dist
+chrome/js/app/bundle.js
