@@ -7,7 +7,15 @@
     <script src="js/lib/angular.min.js"></script>
     <script src="js/app/bundle.js"></script>
   </head>
-  <body ng-controller="PopupController as popup">
-    <h1>{{popup.message}}</h1>
+  <body class="popupbody" ng-controller="PopupController as vm">
+    <h1>Tweesy</h1>
+    <p ng-bind="vm.content.length"></p>
+    <form name="tweetForm" ng-submit="vm.submitTweet()" ng-if="!vm.completed" novalidate>
+      <input type="text" name="content" ng-model="vm.content">
+      <input type="submit" value="ツイート" ng-disabled="vm.content.length === 0 || vm.content.length >= 140">
+    </form>
+    <div ng-if="vm.completed">
+      ツイートが完了しました。
+    </div>
   </body>
 </html>
